@@ -3,11 +3,14 @@ const express = require('express');
 // const apiRoute = require('./routes/api')
 const path = require("path");
 const app = express();
+const cors = require('cors');
 // const router = express.Router();
 const bodyParser = require('body-parser');
 
-
+app.use(cors());
 app.use(express.static(path.join(__dirname, "public")));
+
+
 // app.use('/api', apiRoute)
 
 
